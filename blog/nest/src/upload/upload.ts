@@ -15,39 +15,39 @@ export function fileFilter(type:string[]) {
     }
 }
 
-export function Upload(field: string = 'file', options?: MulterOptions) {
+export function upload(field: string = 'file', options?: MulterOptions) {
     return applyDecorators(
         UseInterceptors(FileInterceptor(field, options))
     )
 }
 
 //图片上传
-export function ImageUpload(field='file'){
-   return Upload(field,{
+export function image(field='file'){
+   return upload(field,{
         limits:{fieldSize:Math.pow(2,2)*3},
         fileFilter:fileFilter(['image'])
     })
 }
 
 //文档上传
-export function DocumentUpload(field='file'){
-    return Upload(field,{
+export function document(field='file'){
+    return upload(field,{
          limits:{fieldSize:Math.pow(2,2)*3},
          fileFilter:fileFilter(['document'])
      })
  }
 
  //md类型文件上传
- export function MarkdownUpload(field='file'){
-    return Upload(field,{
+ export function markdown(field='file'){
+    return upload(field,{
          limits:{fieldSize:Math.pow(2,2)*3},
          fileFilter:fileFilter(['markdown'])
      })
  }
 
  //文件上传
- export function fileUpload(field='file',type:string[]=['image']){
-    return Upload(field,{
+ export function file(field='file',type:string[]=['image']){
+    return upload(field,{
          limits:{fieldSize:Math.pow(2,2)*3},
          fileFilter:fileFilter(type)
      })

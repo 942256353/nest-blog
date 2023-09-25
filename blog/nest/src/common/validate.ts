@@ -3,7 +3,6 @@ import { ValidationError } from 'class-validator';
 
 export default class Validate extends ValidationPipe{
     protected flattenValidationErrors(validationErrors: ValidationError[]): string[]{
-        console.log(validationErrors)
         const messages = {}
         validationErrors.forEach(error=>{
             messages[error.property] = Object.values(error.constraints)[0]

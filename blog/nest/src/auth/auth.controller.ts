@@ -10,11 +10,11 @@ export class AuthController {
     }
     @Post('register')
     register(@Body() dot:RegisterDto){
-        return dot;
+        return this.auth.register(dot);
     }
 
     @Post('login')
     login(@Body() dot:LoginDto){
-        return dot;
+        return this.auth.login(dot);
     }
 }
