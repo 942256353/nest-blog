@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const content = ref('后盾人')
+const content = ref('小谢')
 </script>
 
 <template>

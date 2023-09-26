@@ -1,4 +1,4 @@
-import { getArticleDetail, getArticleList } from '@/apis/article'
+import { addArticle, getArticleDetail, getArticleList } from '@/apis/article'
 import { ref } from 'vue'
 
 export default () => {
@@ -12,8 +12,8 @@ export default () => {
   const find = async (id: number) => {
     article.value = await getArticleDetail(id)
   }
-  const add = async (data: ArticleModel) => {
-
+  const add = async (data: Record<string,any>) => {
+    return addArticle(data)
   }
   return { all, pageResult, find, article,add}
 }

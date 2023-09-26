@@ -7,8 +7,12 @@ await find(+route.params.id)
 </script>
 <template>
   <main>
-    <h1>{{ article.title }}</h1>
-    <p>{{ article.content }}</p>
+    <h1>{{ article?.title }}</h1>
+    <time datetime="">
+      发表时间:{{article?.createdAt}} &nbsp;&nbsp;&nbsp;&nbsp;
+      更新时间:{{article?.updatedAt}} 
+    </time>
+    <p>{{ article?.content }}</p>
   </main>
 </template>
 <style scoped lang="scss">
@@ -18,6 +22,9 @@ main {
   }
   p {
     @apply text-gray-600;
+  }
+  time{
+    @apply text-xs font-bold text-slate-600 mb-5 block;
   }
 }
 </style>

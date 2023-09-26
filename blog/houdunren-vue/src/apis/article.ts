@@ -16,3 +16,19 @@ export async function getArticleDetail(id: number) {
     .then((r) => r.data)
   return r
 }
+
+export function addArticle(data:any) {
+  return http.request<ApiData<ArticleModel>>({
+    url: 'article',
+    method: 'POST',
+    data,
+  })
+}
+
+export function updateArticle(id: number, data: any) {
+  return http.request({
+    url: `article/${id}`,
+    method: 'PUT',
+    data,
+  })
+}

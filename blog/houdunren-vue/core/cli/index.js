@@ -2,7 +2,7 @@
 
 /**
  * houdunren-vue
- * 后盾人前端脚手架
+ * 小谢前端脚手架
  * @author 向军大叔 <https://www.houdurnen.com>
  */
 import chalk from 'chalk'
@@ -21,7 +21,7 @@ async function run() {
     //可点击链接
     console.log(
       chalk.green(
-        `欢迎使用后盾人前端脚手架，向军大叔每晚8点在抖音与B站直播，请搜索【后盾人】关注。\n 下载来源于 Github，如果下载失败请访问 https://gitee.com/houdunren/vue`,
+        `欢迎使用小谢前端脚手架，向军大叔每晚8点在抖音与B站直播，请搜索【小谢】关注。\n 下载来源于 Github，如果下载失败请访问 https://gitee.com/houdunren/vue`,
       ),
     )
 

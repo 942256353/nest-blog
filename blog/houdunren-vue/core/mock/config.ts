@@ -8,10 +8,10 @@ export default [
     response: () => {
       return {
         base: {
-          name: '后盾人',
+          name: '小谢',
         },
         copyright: {
-          ad: '后盾人 人人做后盾',
+          ad: '小谢 人人做后盾',
           weixin: 'houdunren2021',
           email: '2300071698@qq.com',
           icp: '京ICP备99999999-8',

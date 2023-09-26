@@ -2,14 +2,14 @@
   "name": "houdunren-vue",
   "private": false,
   "homepage": "https://www.houdunren.com",
-  "description": "后盾人前端脚手架",
+  "description": "小谢前端脚手架",
   "version": "1.0.62",
   "keywords": [
     "vue3",
     "pinia",
     "typescript",
     "脚手架",
-    "后盾人",
+    "小谢",
     "向军大叔"
   ],
   "license": "MIT",
