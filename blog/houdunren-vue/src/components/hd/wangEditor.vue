@@ -46,7 +46,8 @@ const editorConfig: Partial<IEditorConfig> = {
       async customUpload(file: File, insertFn: any) {
         const form = new FormData()
         form.append('file', file, file.name)
-        const { url } = await uploadImage(form)
+        const res = await uploadImage(form)
+        const url = res.data.url
         insertFn(url, '', url)
       },
     },

@@ -1,5 +1,5 @@
 export enum ApiEnum {
-  LOGIN = 'auth/login',
+  LOGIN = '/login',
   REGISTER = 'auth/register',
   FORGOT_PASSWORD = 'auth/forgot-password',
   CURRENT_USER = 'user/current',

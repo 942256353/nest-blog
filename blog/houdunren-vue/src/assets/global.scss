@@ -1,5 +1,5 @@
 body {
-  @apply bg-gray-700 text-gray-700 font-sans text-base ;
+  @apply md:bg-gray-700 bg-gray-50 text-gray-700 font-sans text-base;
 
   a {
     &:hover {
@@ -7,6 +7,7 @@ body {
     }
   }
 }
+
 .el-form-item__error {
   @apply hidden;
 }

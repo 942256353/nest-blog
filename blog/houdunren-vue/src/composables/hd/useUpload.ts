@@ -1,5 +1,5 @@
 import { http } from '@/plugins/axios'
-type UploadResult = { url: string }
+type UploadResult = { data:{url: string} }
 
 export default () => {
   /**

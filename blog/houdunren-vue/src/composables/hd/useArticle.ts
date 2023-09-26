@@ -3,7 +3,7 @@ import { ref } from 'vue'
 
 export default () => {
   const pageResult = ref<ApiPage<ArticleModel>>()
-  let categoryId = null
+  let categoryId:any = null
   const article = ref<ArticleModel>()
   const all = async (page = 1, cid?: any) => {
     if (cid) categoryId = cid
@@ -12,5 +12,8 @@ export default () => {
   const find = async (id: number) => {
     article.value = await getArticleDetail(id)
   }
-  return { all, pageResult, find, article }
+  const add = async (data: ArticleModel) => {
+
+  }
+  return { all, pageResult, find, article,add}
 }
