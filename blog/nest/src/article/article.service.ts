@@ -12,31 +12,44 @@ export class ArticleService {
   create(createArticleDto: CreateArticleDto) {
     console.log('栏目id')
     return this.prisma.article.create({
-      data: {...createArticleDto,categoryId:+createArticleDto.categoryId}
+      data: { ...createArticleDto, categoryId: +createArticleDto.categoryId }
     })
   }
 
-  async findAll(page = 1) {
+  async findAll(args: Record<string, any>) {
     const row = this.config.get('RTICLE_PAGE_ROW');
+    const page = args.page ? +args.page : 1;
     const articles = await this.prisma.article.findMany({
       skip: (page - 1) * row,
-      take: +row
-    });
-    const total = await this.prisma.article.count();
-    return{
-      meta:{
-        current_page:page,
-        page_now:row,
-        total,
-        total_page:Math.ceil(total/row)
+      take: +row,
+      where: {
+        category: args.category ? { id: +args.category } : {},
       },
-      data:articles
+      include: {
+        category: true
+      }
+    });
+    const total = await this.prisma.article.count(
+      {
+        where: {
+          category: args.category ? { id: +args.category } : {},
+        }
+      }
+    );
+    return {
+      meta: {
+        current_page: page,
+        page_now: +row,
+        total,
+        total_page: Math.ceil(total / row)
+      },
+      data: articles
     }
   }
 
   findOne(id: number) {
     return this.prisma.article.findFirst({
-      where:{
+      where: {
         id
       }
     });
@@ -44,14 +57,14 @@ export class ArticleService {
 
   update(id: number, updateArticleDto: UpdateArticleDto) {
     return this.prisma.article.update({
-      where:{id},
-      data: {...updateArticleDto,categoryId:+updateArticleDto.categoryId}
+      where: { id },
+      data: { ...updateArticleDto, categoryId: +updateArticleDto.categoryId }
     });
   }
 
   remove(id: number) {
     return this.prisma.article.delete({
-      where:{id}
+      where: { id }
     });
   }
 }
