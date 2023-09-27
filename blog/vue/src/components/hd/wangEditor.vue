@@ -3,7 +3,7 @@ import { IDomEditor, IEditorConfig, IToolbarConfig } from '@wangeditor/editor'
 import { Editor, Toolbar } from '@wangeditor/editor-for-vue'
 import '@wangeditor/editor/dist/css/style.css'
 import { onBeforeUnmount, ref, shallowRef, watch } from 'vue'
-const { uploadImage } = useUpload()
+const { uploadImage_1 } = useUpload()
 interface IProps {
   modelValue: string
   height: number
@@ -46,7 +46,7 @@ const editorConfig: Partial<IEditorConfig> = {
       async customUpload(file: File, insertFn: any) {
         const form = new FormData()
         form.append('file', file, file.name)
-        const res = await uploadImage(form)
+        const res = await uploadImage_1(form)
         const url = res.data.url
         insertFn(url, '', url)
       },

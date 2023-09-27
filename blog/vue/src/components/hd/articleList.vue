@@ -11,7 +11,7 @@ await all(1, cid)
 <template>
   <main>
     <animate-list tag="div" :duration="2" :delay="0.1">
-      <section v-for="(article, index) in pageResult.data" :key="article.id" :data-index="index">
+      <section v-for="(article, index) in pageResult?.data" :key="article.id" :data-index="index">
         <router-link :to="{ name: 'article.show', params: { id: article.id } }">
           {{ article.title }}
         </router-link>
@@ -23,8 +23,8 @@ await all(1, cid)
     <div class="mt-5 border-t border-gray-100 pt-3">
       <el-pagination
         @current-change="all"
-        :total="pageResult.meta.total"
-        :page-size="pageResult.meta.page_now"
+        :total="pageResult?.meta.total"
+        :page-size="pageResult?.meta.page_now"
         :page-sizes="[20, 40, 80, 100]"
         background>
       </el-pagination>

@@ -10,7 +10,7 @@ const { form, register } = useAuth()
         <div>
           <h2 class="text-center text-gray-700 text-lg mt-3">会员注册</h2>
           <div class="mt-8">
-            <HdFormInput v-model="form.account" placeholder="请输入邮箱" v-clearError="'account'" />
+            <HdFormInput v-model="form.name" placeholder="请输入邮箱" v-clearError="'account'" />
             <HdError name="account" />
             <HdFormInput
               v-model="form.password"
@@ -20,7 +20,7 @@ const { form, register } = useAuth()
               v-clearError="'password'" />
             <HdError name="password" />
             <HdFormInput
-              v-model="form.password_confirmation"
+              v-model="form.password"
               class="mt-3"
               type="password"
               placeholder="请输入确认密码"
