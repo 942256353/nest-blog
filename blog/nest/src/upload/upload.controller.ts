@@ -1,4 +1,4 @@
-import { Controller, Post, Req, UploadedFile } from '@nestjs/common';
+import { Controller, Post, UploadedFile } from '@nestjs/common';
 import { image } from './upload';
 import { ConfigService } from '@nestjs/config';
 
@@ -9,9 +9,7 @@ export class UploadController {
     constructor(private config: ConfigService){}
     @Post('image')
     @image()
-    image(@UploadedFile() file: Express.Multer.File,@Req() req){
-
-        console.log('环境',serverHostname);
+    image(@UploadedFile() file: Express.Multer.File){
         return {
             url:`${serverHostname}/${file.path}`
         }
