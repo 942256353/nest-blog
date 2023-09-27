@@ -20,7 +20,7 @@
       </section>
       <section>
         <el-button type="primary" size="default" @click="$router.push({name:'article.create'})"> 发表文章 </el-button>
-        <el-button type="success" size="default"> 管理员登录 </el-button>
+        <el-button type="success" size="default" @click="$router.push({name:'login'})"> 管理员登录 </el-button>
       </section>
     </nav>
     <RouterView v-slot="{ Component, route }">
