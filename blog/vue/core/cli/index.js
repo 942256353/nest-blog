@@ -3,7 +3,7 @@
 /**
  * houdunren-vue
  * 小谢前端脚手架
- * @author 向军大叔 <https://www.houdurnen.com>
+ * @author 小谢 <https://www.houdurnen.com>
  */
 import chalk from 'chalk'
 import inquirer from 'inquirer'
@@ -19,11 +19,7 @@ async function run() {
     //打印文字图案
     console.log(data)
     //可点击链接
-    console.log(
-      chalk.green(
-        `欢迎使用小谢前端脚手架，向军大叔每晚8点在抖音与B站直播，请搜索【小谢】关注。\n 下载来源于 Github，如果下载失败请访问 https://gitee.com/houdunren/vue`,
-      ),
-    )
+    console.log(chalk.green(`欢迎使用小谢前端脚手架`))
 
     //询问用户
     const message = await inquirer.prompt({

@@ -1,4 +1,4 @@
-## 项目介绍 
+## 项目介绍
 
 houdunren-vue 帮助大家加快前端项目的开发，本项目提供了前端开发的很多基础功能。使用 vite、typescript、vue3、element-plus、pinia、vue-router、axios、tailwindcss 等技术开发。
 
@@ -15,32 +15,23 @@ houdunren-vue 帮助大家加快前端项目的开发，本项目提供了前端
 - 路由权限、图标等自定义控制
 - 移动端自适应用
 
-
 **在线文档**
 
 请查看[在线手册](https://doc.houdunren.com)学习使用，同时 [小谢](https://www.houdunren.com/) 也提供了丰富的视频教程。
 
-
-
 ### 作者
 
-开发者 [向军大叔](https://www.houdunren.com) 从事编程多年的老程序员，晚 8 点在抖音与 B 站直播，欢迎光临。
-
-
+开发者 [小谢](https://www.houdunren.com) 从事编程多年的老程序员，晚 8 点在抖音与 B 站直播，欢迎光临。
 
 ### 版本库
 
 我会将项目提交到 [github](https://github.com/houdunwang/vue) 与 [gitee](https://gitee.com/houdunren/vue) 两个版本库。
-
-
 
 ## 安装项目
 
 现在我们来安装前端脚手架项目，我介绍三种安装方式
 
 安装后修改.env 文件内容: **VITE_MOCK_ENABLE=true**，这样可以使用 mock 数据查看效果，如果你有后台数据记得设置为**false**。
-
-
 
 ### CLI
 
@@ -62,7 +53,7 @@ pnpm add -g houdunren-vue
  | | | | (_) | |_| | (_| | |_| | | | | | |  __/ | | || (_| (_) | | | | | |
  |_| |_|\___/ \__,_|\__,_|\__,_|_| |_|_|  \___|_| |_(_)___\___/|_| |_| |_|
 
-欢迎使用小谢前端脚手架，向军大叔每晚8点在抖音与bilibli直播
+欢迎使用小谢前端脚手架，小谢每晚8点在抖音与bilibli直播
 ? 请输入目录名 hd
 ✔ 项目创建成功，请依次执行以下命令
 cd hd
@@ -78,8 +69,6 @@ pnpm run dev
 ```
 pnpm update -g
 ```
-
-
 
 ### npx
 
@@ -97,19 +86,16 @@ pnpm add houdunren-vue
 npx houdunren-vue
 ```
 
-
-
 ### GIT
 
 你也通过 [github](https://github.com/houdunwang/vue) 或 [gitee](https://gitee.com/houdunren/vue) 下载源码进行安装。
+
 ```
 $ git clone https://gitee.com/houdunren/vue houdunren-vue
 $ cd houdunren-vue
 $ npm install
 $ npm run dev
 ```
-
-
 
 ## 项目预览
 
@@ -119,11 +105,9 @@ $ npm run dev
 
 ![image-20220706223650063](https://git-readme-image.oss-cn-hangzhou.aliyuncs.com/houdunren-vue-cli/image-20220706223650063.jpg)
 
-
-
 ## 每晚直播
 
-向军大叔会在每晚八点进行直播，与大家交流技术与生活。
+小谢会在每晚八点进行直播，与大家交流技术与生活。
 
 <img src="https://git-readme-image.oss-cn-hangzhou.aliyuncs.com/houdunren-vue-cli/xj.jpg" alt="image-20210216220804022" style="zoom:50%;" />
 

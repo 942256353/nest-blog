@@ -17,7 +17,7 @@ export async function getArticleDetail(id: number) {
   return r
 }
 
-export function addArticle(data:any) {
+export function addArticle(data: any) {
   return http.request<ApiData<ArticleModel>>({
     url: 'article',
     method: 'POST',
@@ -25,10 +25,10 @@ export function addArticle(data:any) {
   })
 }
 
-export function updateArticle(id: number, data: any) {
+export function updateArticle(data: any) {
   return http.request({
-    url: `article/${id}`,
-    method: 'PUT',
+    url: `article/${data.id}`,
+    method: 'PATCH',
     data,
   })
 }

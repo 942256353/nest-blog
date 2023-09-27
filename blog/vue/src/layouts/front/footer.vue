@@ -15,7 +15,7 @@ const { config } = useConfigStore()
         <img src="/images/xj.jpg" class="h-32 rounded-lg object-cover" />
         <div class="text-center mt-3 text-base font-bold">
           <span class="opacity-90 mr-2">本站编码</span>
-          <a href="https://www.houdunren.com" class="text-[#ff7675] font-bold">向军大叔</a><br /><button
+          <a href="https://www.houdunren.com" class="text-[#ff7675] font-bold">小谢</a><br /><button
             class="el-button el-button--success mt-3 flex items-center"
             type="button">
             <span><i class="fas fa-play-circle"></i> 晚八点直播，来直播间聊天吧 </span>

@@ -58,7 +58,7 @@ export class ArticleService {
   update(id: number, updateArticleDto: UpdateArticleDto) {
     return this.prisma.article.update({
       where: { id },
-      data: { ...updateArticleDto, categoryId: +updateArticleDto.categoryId }
+      data: { title:updateArticleDto.title,content:updateArticleDto.content, categoryId: +updateArticleDto.categoryId }
     });
   }
 

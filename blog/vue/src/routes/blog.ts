@@ -19,6 +19,11 @@ export default {
       component: () => import('@/views/article/create.vue'),
     },
     {
+      name: 'article.update',
+      path: 'article/:id',
+      component: () => import('@/views/article/update.vue'),
+    },
+    {
       name: 'category.index',
       path: 'category/:cid',
       component: () => import('@/views/category/index.vue'),

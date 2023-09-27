@@ -1,24 +1,22 @@
 <script lang="ts" setup>
 import WangEditor from '@/components/hd/wangEditor.vue'
-const { add } = useArticle()
+
+const route = useRoute()
+const { find, article, update } = useArticle()
 const { all, categories } = useCategory()
+await find(+route.params.id)
 await all()
-const article = ref({
-  title: '',
-  content: '',
-  categoryId: '',
-})
 const router = useRouter()
 const onSubmit = async () => {
   try {
-    await add(article.value)
+    await update(article.value!)
     router.push('/')
   } catch (error) {}
 }
 </script>
 <template>
-  <el-card shadow="always" :body-style="{ padding: '20px' }" class="mt-3">
-    <template #header> 发表文章 </template>
+  <el-card shadow="always" :body-style="{ padding: '20px' }" class="mt-3" v-if="article">
+    <template #header> 编辑 </template>
 
     <el-select v-model="article.categoryId" placeholder="请选择栏目" class="mb-2">
       <el-option v-for="category in categories" :key="category.id" :label="category.title" :value="category.id" />

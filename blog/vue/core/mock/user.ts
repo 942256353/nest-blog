@@ -8,7 +8,7 @@ export default [
     response: () => {
       return {
         id: 1,
-        name: '向军大叔',
+        name: '小谢',
         email: '2300071698@qq.com',
         sex: 1,
         avatar: '/images/xj.jpg',
